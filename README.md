@@ -1,5 +1,8 @@
 Reproduction of: https://github.com/angular/angular-cli/issues/3875
+When creating a component in a lib project and using npm link an error occurs on ng build.
+This is because angular-cli/webpack looks for classes in the /frontend/node_modules/@test/lib/node_modules directory
 
+* npm install (both subdirs)
 * npm link (in ./lib)
 * npm link @test/lib (in frontend)
 * ng build
